@@ -23,7 +23,7 @@ A clean, editorial-style news website with daily briefings and deep dives.
 5. Wait 2-3 minutes — your site is live at `https://yourusername.github.io/thedailydrip/`
 
 ### Step 4: Connect Custom Domain
-1. In **Settings → Pages → Custom domain**, type: `thedailydrip.in`
+1. In **Settings → Pages → Custom domain**, type: `thedailypunch.in`
 2. Check **Enforce HTTPS**
 3. In your domain registrar's DNS settings, add these **A records**:
    ```
