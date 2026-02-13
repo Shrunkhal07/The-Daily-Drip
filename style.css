@@ -63,6 +63,9 @@ button { cursor: pointer; font-family: var(--ui); }
 .mobile-nav { display: none; flex-direction: column; padding: 12px var(--g) 16px; border-bottom: 1px solid var(--border); background: var(--bg); }
 .mobile-nav.open { display: flex; }
 .mobile-nav a { padding: 8px 0; font-size: 14px; font-weight: 500; color: var(--ink-2); }
+.mobile-tabs { display: flex; gap: 8px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.mobile-tabs .nav-tab { height: auto; padding: 8px 16px; border: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: 100px; font-size: 13px; }
+.mobile-tabs .nav-tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
 
 /* ── PAGES ── */
 .page { display: none; }
