@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+        content="default-src 'self'; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com;">
     <title>The Daily Drip — Business, Tech & Policy Intelligence</title>
     <meta name="description"
         content="Sharp, independent analysis on Indian business, technology, startups, and policy. Free daily briefings and weekly deep dives for the curious professional.">
@@ -27,6 +27,15 @@
 {"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The Daily Drip","url":"https://thedailypunch.in","description":"Independent analysis on Indian business, technology, and policy","sameAs":[]}
 </script>
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HRVHZNV2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0HRVHZNV2J');
+    </script>
 </head>
 
 <body>
