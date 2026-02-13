@@ -1,202 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Daily Drip — Business, Tech & Policy Intelligence</title>
-<meta name="description" content="Sharp, independent analysis on Indian business, technology, startups, and policy. Free daily briefings and weekly deep dives for the curious professional.">
-<meta name="keywords" content="Indian business news, startup analysis, tech news India, policy analysis, fintech India, daily news briefing">
-<link rel="canonical" href="https://thedailypunch.in">
-<meta property="og:title" content="The Daily Drip — Business, Tech & Policy Intelligence">
-<meta property="og:description" content="Sharp analysis. Zero noise. Free daily briefings for India's business-curious.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://thedailypunch.in">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Daily Drip — Business, Tech & Policy Intelligence">
-<meta name="twitter:description" content="Sharp analysis. Zero noise. Free daily briefings for India's business-curious.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23D4362C'/><text x='50' y='72' text-anchor='middle' font-size='60' font-family='Georgia' fill='white'>D</text></svg>">
-<script type="application/ld+json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+    <title>The Daily Drip — Business, Tech & Policy Intelligence</title>
+    <meta name="description"
+        content="Sharp, independent analysis on Indian business, technology, startups, and policy. Free daily briefings and weekly deep dives for the curious professional.">
+    <meta name="keywords"
+        content="Indian business news, startup analysis, tech news India, policy analysis, fintech India, daily news briefing">
+    <link rel="canonical" href="https://thedailypunch.in">
+    <meta property="og:title" content="The Daily Drip — Business, Tech & Policy Intelligence">
+    <meta property="og:description"
+        content="Sharp analysis. Zero noise. Free daily briefings for India's business-curious.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thedailypunch.in">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Daily Drip — Business, Tech & Policy Intelligence">
+    <meta name="twitter:description"
+        content="Sharp analysis. Zero noise. Free daily briefings for India's business-curious.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23D4362C'/><text x='50' y='72' text-anchor='middle' font-size='60' font-family='Georgia' fill='white'>D</text></svg>">
+    <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The Daily Drip","url":"https://thedailypunch.in","description":"Independent analysis on Indian business, technology, and policy","sameAs":[]}
 </script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar"><div class="topbar-inner"><span>📬 Join 14,000+ readers — <a href="#newsletter">Subscribe free</a></span><div class="topbar-right"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="about.html">About</a></div></div></div>
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner"><span>📬 Join 14,000+ readers — <a href="#newsletter">Subscribe free</a></span>
+            <div class="topbar-right"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="about.html">About</a>
+            </div>
+        </div>
+    </div>
 
-<!-- HEADER -->
-<header class="site-header"><div class="header-main">
-<a href="index.html" class="logo"><span class="logo-mark">D</span>The Daily Drip</a>
-<div class="nav-tabs">
-<button class="nav-tab active" data-page="editorial">Editorial</button>
-<button class="nav-tab" data-page="daily">Today's Briefing<span class="tab-badge">LIVE</span></button>
-</div>
-<div class="nav-right"><div class="nav-topics"><a href="#">Business</a><a href="#">Tech</a><a href="#">Policy</a><a href="#">Markets</a></div><button class="btn-sub" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe</button></div>
-<button class="mobile-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
-</div>
-<!-- Mobile Nav -->
-<div class="mobile-nav">
-<a href="#">Business</a><a href="#">Tech</a><a href="#">Policy</a><a href="#">Markets</a>
-<a href="about.html">About</a>
-<button class="btn-sub" style="width:100%;margin-top:8px" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe Free</button>
-</div>
-</header>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="logo"><span class="logo-mark">D</span>The Daily Drip</a>
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-page="editorial">Editorial</button>
+                <button class="nav-tab" data-page="daily">Today's Briefing<span class="tab-badge">LIVE</span></button>
+            </div>
+            <div class="nav-right">
+                <div class="nav-topics"><a href="#">Business</a><a href="#">Tech</a><a href="#">Policy</a><a
+                        href="#">Markets</a></div><button class="btn-sub"
+                    onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+            </div>
+            <button class="mobile-btn"
+                onclick="document.querySelector('.mobile-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+        </div>
+        <!-- Mobile Nav -->
+        <div class="mobile-nav">
+            <a href="#">Business</a><a href="#">Tech</a><a href="#">Policy</a><a href="#">Markets</a>
+            <a href="about.html">About</a>
+            <button class="btn-sub" style="width:100%;margin-top:8px"
+                onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe
+                Free</button>
+        </div>
+    </header>
 
-<!-- ═══════════ EDITORIAL PAGE ═══════════ -->
-<div id="editorial" class="page active">
-<div class="container"><section class="ed-hero">
-<div class="ed-date" id="dateDisplay"></div>
-<div class="ed-grid">
-<!-- FEATURED -->
-<div class="ed-featured" onclick="window.location='article.html'">
-<div class="ed-featured-img ph ph-1"><span class="overlay-tag">Deep Dive</span></div>
-<span class="tag">Business</span>
-<h2>India's Quick Commerce War Has a New Battleground — and It's Not Groceries</h2>
-<p>As Blinkit, Zepto, and Swiggy Instamart compete for dominance, a quiet pivot into electronics, fashion, and beauty is reshaping the economics of 10-minute delivery.</p>
-<div class="meta"><span>By Arjun Mehta</span><span class="meta-dot"></span><span>8 min read</span><span class="meta-dot"></span><span class="badge-ed">✦ Editorial</span></div>
-</div>
-<!-- SIDE STORIES -->
-<div class="ed-side">
-<a href="article.html" class="ed-side-item"><div><span class="tag">Technology</span><h3>Why Indian SaaS Founders Are Quietly Moving HQ Back to Bengaluru</h3><div class="excerpt">Visa uncertainty, remote work culture, and homegrown AI labs are pulling founders back.</div><div class="meta"><span>5 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Curated</span></div></div><div class="ed-side-img ph ph-2"></div></a>
-<a href="article.html" class="ed-side-item"><div><span class="tag">Policy</span><h3>The RBI's Digital Rupee Push: What Banks Don't Want You to Know</h3><div class="excerpt">Adoption is lagging but the central bank isn't slowing down. Here's what's really at stake.</div><div class="meta"><span>6 min</span><span class="meta-dot"></span><span class="badge-ed">✦ Editorial</span></div></div><div class="ed-side-img ph ph-3"></div></a>
-<a href="article.html" class="ed-side-item"><div><span class="tag">Markets</span><h3>Reliance Retail's Quiet Bet on Private Labels Could Disrupt FMCG Forever</h3><div class="meta"><span>4 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Curated</span></div></div><div class="ed-side-img ph ph-4"></div></a>
-<a href="article.html" class="ed-side-item"><div><span class="tag">Fintech</span><h3>Why PhonePe's Insurance Play Is Smarter Than You Think</h3><div class="meta"><span>5 min</span></div></div><div class="ed-side-img ph ph-5"></div></a>
-</div>
-</div>
-</section></div>
+    <!-- ═══════════ EDITORIAL PAGE ═══════════ -->
+    <div id="editorial" class="page active">
+        <div class="container">
+            <section class="ed-hero">
+                <div class="ed-date" id="dateDisplay"></div>
+                <div class="ed-grid">
+                    <!-- FEATURED -->
+                    <div class="ed-featured" onclick="window.location='article.html'">
+                        <div class="ed-featured-img ph ph-1"><span class="overlay-tag">Deep Dive</span></div>
+                        <span class="tag">Business</span>
+                        <h2>India's Quick Commerce War Has a New Battleground — and It's Not Groceries</h2>
+                        <p>As Blinkit, Zepto, and Swiggy Instamart compete for dominance, a quiet pivot into
+                            electronics, fashion, and beauty is reshaping the economics of 10-minute delivery.</p>
+                        <div class="meta"><span>By Arjun Mehta</span><span class="meta-dot"></span><span>8 min
+                                read</span><span class="meta-dot"></span><span class="badge-ed">✦ Editorial</span></div>
+                    </div>
+                    <!-- SIDE STORIES -->
+                    <div class="ed-side">
+                        <a href="article.html" class="ed-side-item">
+                            <div><span class="tag">Technology</span>
+                                <h3>Why Indian SaaS Founders Are Quietly Moving HQ Back to Bengaluru</h3>
+                                <div class="excerpt">Visa uncertainty, remote work culture, and homegrown AI labs are
+                                    pulling founders back.</div>
+                                <div class="meta"><span>5 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Curated</span></div>
+                            </div>
+                            <div class="ed-side-img ph ph-2"></div>
+                        </a>
+                        <a href="article.html" class="ed-side-item">
+                            <div><span class="tag">Policy</span>
+                                <h3>The RBI's Digital Rupee Push: What Banks Don't Want You to Know</h3>
+                                <div class="excerpt">Adoption is lagging but the central bank isn't slowing down. Here's
+                                    what's really at stake.</div>
+                                <div class="meta"><span>6 min</span><span class="meta-dot"></span><span
+                                        class="badge-ed">✦ Editorial</span></div>
+                            </div>
+                            <div class="ed-side-img ph ph-3"></div>
+                        </a>
+                        <a href="article.html" class="ed-side-item">
+                            <div><span class="tag">Markets</span>
+                                <h3>Reliance Retail's Quiet Bet on Private Labels Could Disrupt FMCG Forever</h3>
+                                <div class="meta"><span>4 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Curated</span></div>
+                            </div>
+                            <div class="ed-side-img ph ph-4"></div>
+                        </a>
+                        <a href="article.html" class="ed-side-item">
+                            <div><span class="tag">Fintech</span>
+                                <h3>Why PhonePe's Insurance Play Is Smarter Than You Think</h3>
+                                <div class="meta"><span>5 min</span></div>
+                            </div>
+                            <div class="ed-side-img ph ph-5"></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-<!-- AD LEADERBOARD -->
-<div class="container"><div class="ad-unit ad-lb"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot — Leaderboard 728×90</div></div>
+        <!-- AD LEADERBOARD -->
+        <div class="container">
+            <div class="ad-unit ad-lb"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot — Leaderboard 728×90
+            </div>
+        </div>
 
-<!-- STORIES + SIDEBAR -->
-<div class="container"><section class="ed-stories"><div class="ed-row"><div>
-<div class="section-bar"><h2>Latest Stories</h2><a href="#">View all →</a></div>
-<div class="story-feed">
-<a href="article.html" class="story-item"><div><span class="tag">Startups</span><h3>The ₹100-Crore Club: Five D2C Brands That Cracked Profitability</h3><div class="excerpt">While most D2C brands burn cash chasing revenue, a handful have quietly turned profitable. Here's what they did differently.</div><div class="meta"><span>By Priya Sharma</span><span class="meta-dot"></span><span>7 min</span><span class="meta-dot"></span><span class="badge-ed">✦ Editorial</span></div></div><div class="story-thumb ph ph-6"></div></a>
-<a href="article.html" class="story-item"><div><span class="tag">AI & Tech</span><h3>India's AI Talent Drain Is Reversing — But Not for the Reasons You Think</h3><div class="excerpt">Visa uncertainties, remote work, and homegrown AI labs are pulling researchers back.</div><div class="meta"><span>By Rahul Nair</span><span class="meta-dot"></span><span>6 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Curated</span></div></div><div class="story-thumb ph ph-7"></div></a>
+        <!-- STORIES + SIDEBAR -->
+        <div class="container">
+            <section class="ed-stories">
+                <div class="ed-row">
+                    <div>
+                        <div class="section-bar">
+                            <h2>Latest Stories</h2><a href="#">View all →</a>
+                        </div>
+                        <div class="story-feed">
+                            <a href="article.html" class="story-item">
+                                <div><span class="tag">Startups</span>
+                                    <h3>The ₹100-Crore Club: Five D2C Brands That Cracked Profitability</h3>
+                                    <div class="excerpt">While most D2C brands burn cash chasing revenue, a handful have
+                                        quietly turned profitable. Here's what they did differently.</div>
+                                    <div class="meta"><span>By Priya Sharma</span><span class="meta-dot"></span><span>7
+                                            min</span><span class="meta-dot"></span><span class="badge-ed">✦
+                                            Editorial</span></div>
+                                </div>
+                                <div class="story-thumb ph ph-6"></div>
+                            </a>
+                            <a href="article.html" class="story-item">
+                                <div><span class="tag">AI & Tech</span>
+                                    <h3>India's AI Talent Drain Is Reversing — But Not for the Reasons You Think</h3>
+                                    <div class="excerpt">Visa uncertainties, remote work, and homegrown AI labs are
+                                        pulling researchers back.</div>
+                                    <div class="meta"><span>By Rahul Nair</span><span class="meta-dot"></span><span>6
+                                            min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI
+                                            Curated</span></div>
+                                </div>
+                                <div class="story-thumb ph ph-7"></div>
+                            </a>
 
-<div class="ad-unit ad-in"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot — In-Article 300×250</div>
+                            <div class="ad-unit ad-in"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot —
+                                In-Article 300×250</div>
 
-<a href="article.html" class="story-item"><div><span class="tag">Finance</span><h3>Mutual Fund Houses Bet Big on Small-Town India — Here's Why</h3><div class="excerpt">Tier 2 and 3 cities now account for 38% of new SIP accounts.</div><div class="meta"><span>By Kavita Iyer</span><span class="meta-dot"></span><span>5 min</span></div></div><div class="story-thumb ph ph-8"></div></a>
-<a href="article.html" class="story-item"><div><span class="tag">Climate</span><h3>Solar Manufacturing in India: Subsidies Are Flowing, but Scale Isn't</h3><div class="excerpt">Despite PLI incentives worth ₹19,500 crore, manufacturers struggle with yield rates and Chinese competition.</div><div class="meta"><span>By Aditya Rao</span><span class="meta-dot"></span><span>9 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Curated</span></div></div><div class="story-thumb ph ph-3"></div></a>
-</div></div>
+                            <a href="article.html" class="story-item">
+                                <div><span class="tag">Finance</span>
+                                    <h3>Mutual Fund Houses Bet Big on Small-Town India — Here's Why</h3>
+                                    <div class="excerpt">Tier 2 and 3 cities now account for 38% of new SIP accounts.
+                                    </div>
+                                    <div class="meta"><span>By Kavita Iyer</span><span class="meta-dot"></span><span>5
+                                            min</span></div>
+                                </div>
+                                <div class="story-thumb ph ph-8"></div>
+                            </a>
+                            <a href="article.html" class="story-item">
+                                <div><span class="tag">Climate</span>
+                                    <h3>Solar Manufacturing in India: Subsidies Are Flowing, but Scale Isn't</h3>
+                                    <div class="excerpt">Despite PLI incentives worth ₹19,500 crore, manufacturers
+                                        struggle with yield rates and Chinese competition.</div>
+                                    <div class="meta"><span>By Aditya Rao</span><span class="meta-dot"></span><span>9
+                                            min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI
+                                            Curated</span></div>
+                                </div>
+                                <div class="story-thumb ph ph-3"></div>
+                            </a>
+                        </div>
+                    </div>
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-<div class="side-card"><h3>Trending This Week</h3>
-<a href="article.html" class="trend-item"><span class="trend-num">1</span><div><div class="trend-title">SEBI's New Rules Could Kill India's Angel Investing Boom</div><div class="trend-meta">Policy · 4 min</div></div></a>
-<a href="article.html" class="trend-item"><span class="trend-num">2</span><div><div class="trend-title">Inside Flipkart's ₹2,000 Crore Ad Business</div><div class="trend-meta">Business · 6 min</div></div></a>
-<a href="article.html" class="trend-item"><span class="trend-num">3</span><div><div class="trend-title">How Zomato Turned Blinkit Into Its Most Valuable Asset</div><div class="trend-meta">Startups · 5 min</div></div></a>
-<a href="article.html" class="trend-item"><span class="trend-num">4</span><div><div class="trend-title">The Semiconductor Dream Has a Talent Problem</div><div class="trend-meta">Technology · 7 min</div></div></a>
-<a href="article.html" class="trend-item"><span class="trend-num">5</span><div><div class="trend-title">Why Credit Card Rewards Are Quietly Disappearing</div><div class="trend-meta">Fintech · 3 min</div></div></a>
-</div>
-<div class="ad-unit ad-sb"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot — Sidebar 300×250</div>
-<div class="side-card"><h3>Browse Topics</h3><div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px"><a href="#" class="topic-pill">Startups</a><a href="#" class="topic-pill">Fintech</a><a href="#" class="topic-pill">AI & ML</a><a href="#" class="topic-pill">Policy</a><a href="#" class="topic-pill">Climate</a><a href="#" class="topic-pill">Markets</a><a href="#" class="topic-pill">Real Estate</a><a href="#" class="topic-pill">Healthcare</a></div></div>
-</aside>
-</div></section></div>
-</div>
+                    <!-- SIDEBAR -->
+                    <aside class="sidebar">
+                        <div class="side-card">
+                            <h3>Trending This Week</h3>
+                            <a href="article.html" class="trend-item"><span class="trend-num">1</span>
+                                <div>
+                                    <div class="trend-title">SEBI's New Rules Could Kill India's Angel Investing Boom
+                                    </div>
+                                    <div class="trend-meta">Policy · 4 min</div>
+                                </div>
+                            </a>
+                            <a href="article.html" class="trend-item"><span class="trend-num">2</span>
+                                <div>
+                                    <div class="trend-title">Inside Flipkart's ₹2,000 Crore Ad Business</div>
+                                    <div class="trend-meta">Business · 6 min</div>
+                                </div>
+                            </a>
+                            <a href="article.html" class="trend-item"><span class="trend-num">3</span>
+                                <div>
+                                    <div class="trend-title">How Zomato Turned Blinkit Into Its Most Valuable Asset
+                                    </div>
+                                    <div class="trend-meta">Startups · 5 min</div>
+                                </div>
+                            </a>
+                            <a href="article.html" class="trend-item"><span class="trend-num">4</span>
+                                <div>
+                                    <div class="trend-title">The Semiconductor Dream Has a Talent Problem</div>
+                                    <div class="trend-meta">Technology · 7 min</div>
+                                </div>
+                            </a>
+                            <a href="article.html" class="trend-item"><span class="trend-num">5</span>
+                                <div>
+                                    <div class="trend-title">Why Credit Card Rewards Are Quietly Disappearing</div>
+                                    <div class="trend-meta">Fintech · 3 min</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ad-unit ad-sb"><!-- AD SLOT: Replace with your AdSense code --> Ad Slot — Sidebar
+                            300×250</div>
+                        <div class="side-card">
+                            <h3>Browse Topics</h3>
+                            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px"><a href="#"
+                                    class="topic-pill">Startups</a><a href="#" class="topic-pill">Fintech</a><a href="#"
+                                    class="topic-pill">AI & ML</a><a href="#" class="topic-pill">Policy</a><a href="#"
+                                    class="topic-pill">Climate</a><a href="#" class="topic-pill">Markets</a><a href="#"
+                                    class="topic-pill">Real Estate</a><a href="#" class="topic-pill">Healthcare</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </div>
 
-<!-- ═══════════ DAILY BRIEFING PAGE ═══════════ -->
-<div id="daily" class="page">
-<div class="container">
-<section class="daily-header">
-<h1>Today's Briefing</h1>
-<div class="daily-sub">7 stories shaping Indian business today — read in 8 minutes</div>
-<div class="daily-meta-bar"><span><span class="live-dot"></span> Updated 2 hours ago</span><span class="meta-dot"></span><span id="dailyDate"></span><span class="meta-dot"></span><span>Edition #247</span></div>
-</section>
-<div class="daily-layout">
-<div class="briefing-list">
+    <!-- ═══════════ DAILY BRIEFING PAGE ═══════════ -->
+    <div id="daily" class="page">
+        <div class="container">
+            <section class="daily-header">
+                <h1>Today's Briefing</h1>
+                <div class="daily-sub">7 stories shaping Indian business today — read in 8 minutes</div>
+                <div class="daily-meta-bar"><span><span class="live-dot"></span> Updated 2 hours ago</span><span
+                        class="meta-dot"></span><span id="dailyDate"></span><span class="meta-dot"></span><span>Edition
+                        #247</span></div>
+            </section>
+            <div class="daily-layout">
+                <div class="briefing-list">
 
-<!-- BRIEF 1 -->
-<article class="brief-card" itemscope itemtype="https://schema.org/NewsArticle">
-<meta itemprop="datePublished" content="">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">1</span><div class="brief-content"><span class="tag">Business</span><h3 itemprop="headline">Swiggy's Instamart Is Now Delivering iPhones in 10 Minutes</h3><p class="brief-summary"><strong>The signal:</strong> Quick commerce is no longer about groceries. Swiggy Instamart has started listing electronics and premium beauty products, competing directly with e-commerce giants for high-margin categories.</p><div class="meta"><span>2 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>Swiggy Instamart has quietly added electronics, premium skincare, and fashion accessories to its dark store inventory in six metro cities. An iPhone 16 can now arrive at your doorstep in under 15 minutes — the same time it takes Flipkart to process your order.</p><p>The economics are counterintuitive at first glance. Dark store real estate costs ₹60-80/sq ft in metros, making high-value low-volume inventory a smart play. A single iPhone sale can match the margin of 200 grocery orders.</p><p>Blinkit has been testing similar moves with electronics pilots in Delhi-NCR, while Zepto is reportedly in talks with premium beauty brands for exclusive quick-commerce launches.</p></div></div>
-</article>
+                    <!-- BRIEF 1 -->
+                    <article class="brief-card" itemscope itemtype="https://schema.org/NewsArticle">
+                        <meta itemprop="datePublished" content="">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">1</span>
+                            <div class="brief-content"><span class="tag">Business</span>
+                                <h3 itemprop="headline">Swiggy's Instamart Is Now Delivering iPhones in 10 Minutes</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> Quick commerce is no longer about
+                                    groceries. Swiggy Instamart has started listing electronics and premium beauty
+                                    products, competing directly with e-commerce giants for high-margin categories.</p>
+                                <div class="meta"><span>2 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>Swiggy Instamart has quietly added electronics, premium skincare, and fashion
+                                    accessories to its dark store inventory in six metro cities. An iPhone 16 can now
+                                    arrive at your doorstep in under 15 minutes — the same time it takes Flipkart to
+                                    process your order.</p>
+                                <p>The economics are counterintuitive at first glance. Dark store real estate costs
+                                    ₹60-80/sq ft in metros, making high-value low-volume inventory a smart play. A
+                                    single iPhone sale can match the margin of 200 grocery orders.</p>
+                                <p>Blinkit has been testing similar moves with electronics pilots in Delhi-NCR, while
+                                    Zepto is reportedly in talks with premium beauty brands for exclusive quick-commerce
+                                    launches.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- BRIEF 2 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">2</span><div class="brief-content"><span class="tag">Policy</span><h3>SEBI Proposes Stricter Rules for Finfluencers — Here's What Changes</h3><p class="brief-summary"><strong>The signal:</strong> A new SEBI consultation paper wants registered entities to sever all commercial ties with unregistered financial influencers. The ₹500 crore finfluencer economy faces an existential threat.</p><div class="meta"><span>2 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>SEBI's latest consultation paper takes direct aim at the booming finfluencer ecosystem. Under the proposed rules, any SEBI-registered entity — brokers, mutual fund houses, portfolio managers — would be barred from commercial arrangements with unregistered influencers.</p><p>Platforms like Zerodha, Groww, and Angel One may need to rethink their entire affiliate marketing strategy. Industry estimates suggest finfluencers drove 15-20% of new demat account openings in FY25.</p></div>
-<div class="signal-take"><div class="signal-take-label">⚡ The Drip Take</div><p>This regulation is overdue but execution will be messy. SEBI can't police 50,000 Instagram accounts. What's more likely: platforms will self-regulate by building walled-garden influencer programs. The era of wild-west finfluencing is ending — but money will flow through different pipes.</p></div>
-</div>
-</article>
+                    <!-- BRIEF 2 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">2</span>
+                            <div class="brief-content"><span class="tag">Policy</span>
+                                <h3>SEBI Proposes Stricter Rules for Finfluencers — Here's What Changes</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> A new SEBI consultation paper
+                                    wants registered entities to sever all commercial ties with unregistered financial
+                                    influencers. The ₹500 crore finfluencer economy faces an existential threat.</p>
+                                <div class="meta"><span>2 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>SEBI's latest consultation paper takes direct aim at the booming finfluencer
+                                    ecosystem. Under the proposed rules, any SEBI-registered entity — brokers, mutual
+                                    fund houses, portfolio managers — would be barred from commercial arrangements with
+                                    unregistered influencers.</p>
+                                <p>Platforms like Zerodha, Groww, and Angel One may need to rethink their entire
+                                    affiliate marketing strategy. Industry estimates suggest finfluencers drove 15-20%
+                                    of new demat account openings in FY25.</p>
+                            </div>
+                            <div class="signal-take">
+                                <div class="signal-take-label">⚡ The Drip Take</div>
+                                <p>This regulation is overdue but execution will be messy. SEBI can't police 50,000
+                                    Instagram accounts. What's more likely: platforms will self-regulate by building
+                                    walled-garden influencer programs. The era of wild-west finfluencing is ending — but
+                                    money will flow through different pipes.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- BRIEF 3 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">3</span><div class="brief-content"><span class="tag">Technology</span><h3>Infosys Lays Off 1,200 Freshers After AI-Driven Restructuring</h3><p class="brief-summary"><strong>The signal:</strong> India's second-largest IT company has let go of 1,200 campus hires in its largest fresher layoff in a decade. Reason: shifting project requirements driven by AI adoption among clients.</p><div class="meta"><span>2 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>Infosys has laid off approximately 1,200 freshers from its 2024 campus cohort — the largest single round of fresher terminations since 2013. Affected employees were primarily in support and testing roles that clients are increasingly automating.</p><p>Across India's top five IT firms, fresher hiring volumes have dropped 35% compared to FY23 levels, even as lateral hiring for AI/ML specialists has surged. The traditional IT pyramid — built on cheap abundant fresher talent — is being compressed from the bottom.</p></div></div>
-</article>
+                    <!-- BRIEF 3 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">3</span>
+                            <div class="brief-content"><span class="tag">Technology</span>
+                                <h3>Infosys Lays Off 1,200 Freshers After AI-Driven Restructuring</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> India's second-largest IT company
+                                    has let go of 1,200 campus hires in its largest fresher layoff in a decade. Reason:
+                                    shifting project requirements driven by AI adoption among clients.</p>
+                                <div class="meta"><span>2 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>Infosys has laid off approximately 1,200 freshers from its 2024 campus cohort — the
+                                    largest single round of fresher terminations since 2013. Affected employees were
+                                    primarily in support and testing roles that clients are increasingly automating.</p>
+                                <p>Across India's top five IT firms, fresher hiring volumes have dropped 35% compared to
+                                    FY23 levels, even as lateral hiring for AI/ML specialists has surged. The
+                                    traditional IT pyramid — built on cheap abundant fresher talent — is being
+                                    compressed from the bottom.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- AD IN BRIEFING -->
-<div class="ad-unit ad-in" style="margin:12px 0 12px 52px"><!-- AD SLOT --> Ad Slot — In-Briefing Native</div>
+                    <!-- AD IN BRIEFING -->
+                    <div class="ad-unit ad-in" style="margin:12px 0 12px 52px"><!-- AD SLOT --> Ad Slot — In-Briefing
+                        Native</div>
 
-<!-- BRIEF 4 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">4</span><div class="brief-content"><span class="tag">Startups</span><h3>Meesho Turns Profitable in Q3 — A First for Indian Social Commerce</h3><p class="brief-summary"><strong>The signal:</strong> Meesho has reported its first quarterly profit, powered by a 40% cut in delivery costs and a booming advertising business. Bengaluru startup now eyes IPO in late 2026.</p><div class="meta"><span>1 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>After years of aggressive cash burn, Meesho has crossed the profitability threshold. Q3 FY26 showed a net profit of ₹12 crore on revenue of ₹1,840 crore — modest, but symbolically significant for a company burning ₹300 crore a quarter just two years ago.</p><p>The turnaround: logistics cost optimization through regional warehouses, a seller advertising platform now generating 18% of revenue, and ruthless unit economics discipline that saw Meesho exit four unprofitable categories entirely.</p></div></div>
-</article>
+                    <!-- BRIEF 4 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">4</span>
+                            <div class="brief-content"><span class="tag">Startups</span>
+                                <h3>Meesho Turns Profitable in Q3 — A First for Indian Social Commerce</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> Meesho has reported its first
+                                    quarterly profit, powered by a 40% cut in delivery costs and a booming advertising
+                                    business. Bengaluru startup now eyes IPO in late 2026.</p>
+                                <div class="meta"><span>1 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>After years of aggressive cash burn, Meesho has crossed the profitability threshold.
+                                    Q3 FY26 showed a net profit of ₹12 crore on revenue of ₹1,840 crore — modest, but
+                                    symbolically significant for a company burning ₹300 crore a quarter just two years
+                                    ago.</p>
+                                <p>The turnaround: logistics cost optimization through regional warehouses, a seller
+                                    advertising platform now generating 18% of revenue, and ruthless unit economics
+                                    discipline that saw Meesho exit four unprofitable categories entirely.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- BRIEF 5 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">5</span><div class="brief-content"><span class="tag">Markets</span><h3>FIIs Pull Out ₹12,000 Crore as Rupee Hits 86.5 Against Dollar</h3><p class="brief-summary"><strong>The signal:</strong> FII sell-off continues in Indian equities. The rupee has weakened to 86.5/$ — its lowest since the 2024 correction — as global rate-cut expectations get pushed further out.</p><div class="meta"><span>1 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>FII outflows have totalled ₹12,400 crore in February's first two weeks, adding to ₹78,000 crore pulled out over four months. The rupee has breached 86.5/$ with RBI reportedly intervening to prevent a sharper slide.</p><p>The trigger is global: stronger-than-expected US jobs data has pushed back Fed rate cut expectations to Q3 2026. For India, this means continued capital flight to dollar assets and pressure on the current account deficit.</p></div></div>
-</article>
+                    <!-- BRIEF 5 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">5</span>
+                            <div class="brief-content"><span class="tag">Markets</span>
+                                <h3>FIIs Pull Out ₹12,000 Crore as Rupee Hits 86.5 Against Dollar</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> FII sell-off continues in Indian
+                                    equities. The rupee has weakened to 86.5/$ — its lowest since the 2024 correction —
+                                    as global rate-cut expectations get pushed further out.</p>
+                                <div class="meta"><span>1 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>FII outflows have totalled ₹12,400 crore in February's first two weeks, adding to
+                                    ₹78,000 crore pulled out over four months. The rupee has breached 86.5/$ with RBI
+                                    reportedly intervening to prevent a sharper slide.</p>
+                                <p>The trigger is global: stronger-than-expected US jobs data has pushed back Fed rate
+                                    cut expectations to Q3 2026. For India, this means continued capital flight to
+                                    dollar assets and pressure on the current account deficit.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- BRIEF 6 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">6</span><div class="brief-content"><span class="tag">AI & Tech</span><h3>Google Launches Gemini Nano on Budget Android Phones in India</h3><p class="brief-summary"><strong>The signal:</strong> Google's on-device AI model is now available on phones under ₹15,000. This could bring AI features to 400 million Indian smartphone users for the first time.</p><div class="meta"><span>2 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>Google has announced Gemini Nano will now run on entry-level Android phones in India. Samsung Galaxy A15 and Xiaomi Redmi Note 14 users get AI-powered text summarization, smart reply, and live call translation in Hindi, Tamil, and Bengali.</p><p>With 400 million smartphone users on sub-₹15,000 devices, Google sees on-device AI as the lever to deepen engagement and keep users within the Google ecosystem as Apple Intelligence heats up at the premium end.</p></div></div>
-</article>
+                    <!-- BRIEF 6 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">6</span>
+                            <div class="brief-content"><span class="tag">AI & Tech</span>
+                                <h3>Google Launches Gemini Nano on Budget Android Phones in India</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> Google's on-device AI model is now
+                                    available on phones under ₹15,000. This could bring AI features to 400 million
+                                    Indian smartphone users for the first time.</p>
+                                <div class="meta"><span>2 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>Google has announced Gemini Nano will now run on entry-level Android phones in India.
+                                    Samsung Galaxy A15 and Xiaomi Redmi Note 14 users get AI-powered text summarization,
+                                    smart reply, and live call translation in Hindi, Tamil, and Bengali.</p>
+                                <p>With 400 million smartphone users on sub-₹15,000 devices, Google sees on-device AI as
+                                    the lever to deepen engagement and keep users within the Google ecosystem as Apple
+                                    Intelligence heats up at the premium end.</p>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- BRIEF 7 -->
-<article class="brief-card">
-<div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">7</span><div class="brief-content"><span class="tag">Real Estate</span><h3>India's Co-living Market Crosses $1.5B — Led by Surprising Tier 2 Growth</h3><p class="brief-summary"><strong>The signal:</strong> Co-living isn't just a metro play anymore. Stanza Living and Zolo see fastest growth in Indore, Jaipur, and Coimbatore, driven by students and gig workers.</p><div class="meta"><span>1 min</span><span class="meta-dot"></span><span class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button class="read-toggle">Read more <span class="arrow">↓</span></button></div></div></div>
-<div class="brief-expand"><div class="brief-body"><p>India's co-living market has crossed $1.5 billion, with Tier 2 and 3 cities contributing nearly 40% of new bed additions. Stanza Living alone added 12,000 beds in non-metro cities this year, up from 3,000 in 2023.</p><p>Demand drivers: an explosion of coaching institutes drawing students to smaller cities, and growth of gig/remote work creating transient professionals who want flexible housing without long leases.</p></div></div>
-</article>
-</div>
+                    <!-- BRIEF 7 -->
+                    <article class="brief-card">
+                        <div class="brief-top" onclick="toggleBrief(this)"><span class="brief-number">7</span>
+                            <div class="brief-content"><span class="tag">Real Estate</span>
+                                <h3>India's Co-living Market Crosses $1.5B — Led by Surprising Tier 2 Growth</h3>
+                                <p class="brief-summary"><strong>The signal:</strong> Co-living isn't just a metro play
+                                    anymore. Stanza Living and Zolo see fastest growth in Indore, Jaipur, and
+                                    Coimbatore, driven by students and gig workers.</p>
+                                <div class="meta"><span>1 min</span><span class="meta-dot"></span><span
+                                        class="badge-ai">⬡ AI Written</span><span class="meta-dot"></span><button
+                                        class="read-toggle">Read more <span class="arrow">↓</span></button></div>
+                            </div>
+                        </div>
+                        <div class="brief-expand">
+                            <div class="brief-body">
+                                <p>India's co-living market has crossed $1.5 billion, with Tier 2 and 3 cities
+                                    contributing nearly 40% of new bed additions. Stanza Living alone added 12,000 beds
+                                    in non-metro cities this year, up from 3,000 in 2023.</p>
+                                <p>Demand drivers: an explosion of coaching institutes drawing students to smaller
+                                    cities, and growth of gig/remote work creating transient professionals who want
+                                    flexible housing without long leases.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
-<!-- DAILY SIDEBAR -->
-<aside class="sidebar">
-<div class="market-card"><h3>Markets Snapshot</h3>
-<div class="market-row"><span class="market-name">Sensex</span><span class="market-val">76,482</span><span class="market-chg down">-0.34%</span></div>
-<div class="market-row"><span class="market-name">Nifty 50</span><span class="market-val">23,115</span><span class="market-chg down">-0.28%</span></div>
-<div class="market-row"><span class="market-name">USD/INR</span><span class="market-val">86.52</span><span class="market-chg down">-0.12%</span></div>
-<div class="market-row"><span class="market-name">Nifty Bank</span><span class="market-val">49,230</span><span class="market-chg up">+0.45%</span></div>
-<div class="market-row"><span class="market-name">Gold (10g)</span><span class="market-val">₹62,450</span><span class="market-chg up">+0.18%</span></div>
-</div>
-<div class="ad-unit ad-sb"><!-- AD SLOT --> Ad Slot — Sidebar 300×250</div>
-<div class="side-card"><h3>From the Archives</h3>
-<a href="article.html" class="trend-item"><div><div class="trend-title">The Untold Story of India's EV Battery Recycling Race</div><div class="trend-meta">Deep Dive · 12 min · Jan 28</div></div></a>
-<a href="article.html" class="trend-item"><div><div class="trend-title">How UPI Became India's Biggest Fintech Export</div><div class="trend-meta">Editorial · 9 min · Jan 21</div></div></a>
-<a href="article.html" class="trend-item"><div><div class="trend-title">Inside Ola's Factory: The ₹6,000 Crore Gamble</div><div class="trend-meta">Deep Dive · 11 min · Jan 14</div></div></a>
-</div>
-<div class="side-card" style="background:var(--gold-bg);border-color:transparent">
-<h3 style="border-bottom-color:var(--gold)">⚡ Weekly Drip Take</h3>
-<p style="font-family:var(--body);font-style:italic;font-size:15px;line-height:1.6;color:var(--ink)">"India doesn't have a startup funding problem. It has a startup ambition problem. We've built a generation of companies that optimize for the next fundraise, not the next decade."</p>
-<div class="meta" style="margin-top:12px"><span>By Arjun Mehta</span><span class="meta-dot"></span><a href="article.html" style="color:var(--red);font-weight:600;font-size:12px">Read full essay →</a></div>
-</div>
-</aside>
-</div>
-</div>
-</div>
+                <!-- DAILY SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="market-card">
+                        <h3>Markets Snapshot</h3>
+                        <div class="market-row"><span class="market-name">Sensex</span><span
+                                class="market-val">76,482</span><span class="market-chg down">-0.34%</span></div>
+                        <div class="market-row"><span class="market-name">Nifty 50</span><span
+                                class="market-val">23,115</span><span class="market-chg down">-0.28%</span></div>
+                        <div class="market-row"><span class="market-name">USD/INR</span><span
+                                class="market-val">86.52</span><span class="market-chg down">-0.12%</span></div>
+                        <div class="market-row"><span class="market-name">Nifty Bank</span><span
+                                class="market-val">49,230</span><span class="market-chg up">+0.45%</span></div>
+                        <div class="market-row"><span class="market-name">Gold (10g)</span><span
+                                class="market-val">₹62,450</span><span class="market-chg up">+0.18%</span></div>
+                    </div>
+                    <div class="ad-unit ad-sb"><!-- AD SLOT --> Ad Slot — Sidebar 300×250</div>
+                    <div class="side-card">
+                        <h3>From the Archives</h3>
+                        <a href="article.html" class="trend-item">
+                            <div>
+                                <div class="trend-title">The Untold Story of India's EV Battery Recycling Race</div>
+                                <div class="trend-meta">Deep Dive · 12 min · Jan 28</div>
+                            </div>
+                        </a>
+                        <a href="article.html" class="trend-item">
+                            <div>
+                                <div class="trend-title">How UPI Became India's Biggest Fintech Export</div>
+                                <div class="trend-meta">Editorial · 9 min · Jan 21</div>
+                            </div>
+                        </a>
+                        <a href="article.html" class="trend-item">
+                            <div>
+                                <div class="trend-title">Inside Ola's Factory: The ₹6,000 Crore Gamble</div>
+                                <div class="trend-meta">Deep Dive · 11 min · Jan 14</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="side-card" style="background:var(--gold-bg);border-color:transparent">
+                        <h3 style="border-bottom-color:var(--gold)">⚡ Weekly Drip Take</h3>
+                        <p
+                            style="font-family:var(--body);font-style:italic;font-size:15px;line-height:1.6;color:var(--ink)">
+                            "India doesn't have a startup funding problem. It has a startup ambition problem. We've
+                            built a generation of companies that optimize for the next fundraise, not the next decade."
+                        </p>
+                        <div class="meta" style="margin-top:12px"><span>By Arjun Mehta</span><span
+                                class="meta-dot"></span><a href="article.html"
+                                style="color:var(--red);font-weight:600;font-size:12px">Read full essay →</a></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
 
-<!-- NEWSLETTER -->
-<section class="nl-strip" id="newsletter"><div class="nl-inner">
-<h2>Sharp analysis. Zero noise.</h2>
-<p>Join 14,000+ professionals who start their morning with The Daily Drip — free briefings + weekly deep dives.</p>
-<div class="nl-form"><input type="email" id="nl-email" placeholder="you@company.com"><button onclick="handleSubscribe(this)">Subscribe Free</button></div>
-</div></section>
+    <!-- NEWSLETTER -->
+    <section class="nl-strip" id="newsletter">
+        <div class="nl-inner">
+            <h2>Sharp analysis. Zero noise.</h2>
+            <p>Join 14,000+ professionals who start their morning with The Daily Drip — free briefings + weekly deep
+                dives.</p>
+            <div class="nl-form"><input type="email" id="nl-email" placeholder="you@company.com"><button
+                    onclick="handleSubscribe(this)">Subscribe Free</button></div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="site-footer"><div class="footer-grid">
-<div class="footer-brand"><a href="index.html" class="logo"><span class="logo-mark">D</span>The Daily Drip</a><p>Independent, sharp analysis on Indian business, technology, and policy. Free to read, built for the curious professional.</p></div>
-<div class="footer-col"><h4>Sections</h4><a href="#">Business</a><a href="#">Technology</a><a href="#">Startups</a><a href="#">Policy</a><a href="#">Markets</a><a href="#">Opinion</a></div>
-<div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Team</a><a href="#">Contact</a><a href="#">Advertise With Us</a></div>
-<div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie Policy</a><a href="#">Editorial Policy</a></div>
-</div><div class="footer-bottom"><span>© 2026 The Daily Drip. All rights reserved.</span><div class="footer-social"><a href="#">Twitter/X</a><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">RSS</a></div></div></footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-mark">D</span>The Daily
+                    Drip</a>
+                <p>Independent, sharp analysis on Indian business, technology, and policy. Free to read, built for the
+                    curious professional.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sections</h4><a href="#">Business</a><a href="#">Technology</a><a href="#">Startups</a><a
+                    href="#">Policy</a><a href="#">Markets</a><a href="#">Opinion</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4><a href="about.html">About</a><a href="#">Team</a><a href="#">Contact</a><a
+                    href="#">Advertise With Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Cookie
+                    Policy</a><a href="#">Editorial Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 The Daily Drip. All rights reserved.</span>
+            <div class="footer-social"><a href="#">Twitter/X</a><a href="#">LinkedIn</a><a href="#">Instagram</a><a
+                    href="#">RSS</a></div>
+        </div>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
