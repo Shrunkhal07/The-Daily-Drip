@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com;">
+    <title>Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable — The Daily Punch</title>
+    <meta name="description"
+        content="A statistical deep dive comparing Virat Kohli and Sachin Tendulkar across Tests, ODIs, and ICC tournaments. The data tells a story both fanbases won't like.">
+    <meta name="keywords"
+        content="Kohli vs Tendulkar, Virat Kohli stats, Sachin Tendulkar comparison, best Indian batsman, Kohli decline, cricket statistics 2026, GOAT debate cricket">
+    <meta property="og:title" content="Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable">
+    <meta property="og:description"
+        content="We ran the numbers across every format. The GOAT debate isn't as clear as you think.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thedailypunch.in/kohli-vs-tendulkar.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable">
+    <meta name="twitter:description"
+        content="We ran the numbers across every format. The GOAT debate isn't as clear as you think.">
+    <link rel="canonical" href="https://thedailypunch.in/kohli-vs-tendulkar.html">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23D4362C'/><text x='50' y='72' text-anchor='middle' font-size='60' font-family='Georgia' fill='white'>P</text></svg>">
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsArticle","headline":"Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable","datePublished":"2026-02-13","dateModified":"2026-02-13","author":{"@type":"Person","name":"The Daily Punch"},"publisher":{"@type":"Organization","name":"The Daily Punch","url":"https://thedailypunch.in"},"description":"A statistical deep dive comparing Virat Kohli and Sachin Tendulkar across Tests, ODIs, and ICC tournaments.","mainEntityOfPage":{"@type":"WebPage","@id":"https://thedailypunch.in/kohli-vs-tendulkar.html"}}
+</script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .stat-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            font-family: var(--ui);
+            font-size: 14px
+        }
+
+        .stat-table th {
+            background: var(--ink);
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 12px;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+            font-weight: 600
+        }
+
+        .stat-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .stat-table tr:nth-child(even) {
+            background: var(--bg-warm)
+        }
+
+        .stat-table .highlight {
+            color: var(--red);
+            font-weight: 700
+        }
+
+        .stat-table .winner {
+            background: #f0faf5;
+            font-weight: 600
+        }
+
+        .stat-table .label {
+            font-weight: 600;
+            color: var(--ink)
+        }
+
+        .verdict-box {
+            background: linear-gradient(135deg, #1B1B18, #2C2C28);
+            color: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px 0
+        }
+
+        .verdict-box h3 {
+            font-family: var(--display);
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 12px
+        }
+
+        .verdict-box p {
+            font-family: var(--body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 12px
+        }
+
+        .verdict-box p:last-child {
+            margin-bottom: 0
+        }
+
+        .pull-quote {
+            font-family: var(--display);
+            font-size: 28px;
+            line-height: 1.35;
+            color: var(--ink);
+            text-align: center;
+            padding: 32px 20px;
+            margin: 36px 0;
+            border-top: 3px solid var(--red);
+            border-bottom: 3px solid var(--red);
+            letter-spacing: -.3px
+        }
+
+        .score-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0
+        }
+
+        .score-card div {
+            background: var(--bg-warm);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center
+        }
+
+        .score-card .sc-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ink-m);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px
+        }
+
+        .score-card .sc-num {
+            font-family: var(--display);
+            font-size: 36px;
+            color: var(--ink)
+        }
+
+        .score-card .sc-label {
+            font-size: 12px;
+            color: var(--ink-m);
+            margin-top: 2px
+        }
+
+        @media(max-width:640px) {
+            .score-card {
+                grid-template-columns: 1fr
+            }
+
+            .pull-quote {
+                font-size: 22px;
+                padding: 24px 12px
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HRVHZNV2J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0HRVHZNV2J');
+    </script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner"><span>📬 Join 14,000+ readers — <a href="index.html#newsletter">Subscribe
+                    free</a></span>
+            <div class="topbar-right"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="about.html">About</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="logo"><span class="logo-mark">P</span>The Daily Punch</a>
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab">Editorial</a>
+                <a href="index.html" class="nav-tab">Today's Briefing</a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-topics"><a href="#">Business</a><a href="#">Tech</a><a href="#">Sports</a><a
+                        href="#">Opinion</a></div><button class="btn-sub"
+                    onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+            </div>
+            <button class="mobile-btn"
+                onclick="document.querySelector('.mobile-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+        </div>
+        <div class="mobile-nav"><a href="#">Business</a><a href="#">Tech</a><a href="#">Sports</a><a
+                href="#">Opinion</a><a href="about.html">About</a></div>
+    </header>
+
+    <!-- ARTICLE -->
+    <article class="article-page">
+        <div class="article-header">
+            <div class="container" style="max-width:760px">
+                <a href="index.html" class="back-link">← Back to Home</a>
+                <span class="tag" style="margin-top:16px">Sports · Opinion</span>
+                <h1 class="article-page-title">Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable
+                </h1>
+                <p class="article-page-subtitle">We compared every major statistical metric — Tests, ODIs, ICC
+                    tournaments, peak years, and decline curves. The GOAT debate isn't as settled as you think.</p>
+                <div class="article-page-meta">
+                    <div class="author-row">
+                        <div class="author-avatar">DP</div>
+                        <div>
+                            <div class="author-name">The Daily Punch</div>
+                            <div class="meta"><span>February 13, 2026</span><span class="meta-dot"></span><span>10 min
+                                    read</span><span class="meta-dot"></span><span class="badge-ed">✦ Editorial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="share-row">
+                        <a href="#" class="share-btn" title="Share on Twitter">𝕏</a>
+                        <a href="#" class="share-btn" title="Share on LinkedIn">in</a>
+                        <a href="#" class="share-btn" title="Copy link"
+                            onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000);return false;">🔗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Image Placeholder -->
+        <div class="article-hero-img"
+            style="background:linear-gradient(135deg,#0a1628,#1a3a5c);display:flex;align-items:center;justify-content:center">
+            <div style="text-align:center;color:rgba(255,255,255,.6);font-family:var(--ui)">
+                <div style="font-size:48px;margin-bottom:8px">🏏</div>
+                <div style="font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase">Kohli vs
+                    Tendulkar — A Statistical Deep Dive</div>
+            </div>
+        </div>
+
+        <!-- Article Body -->
+        <div class="article-body-wrap">
+            <div class="container" style="max-width:760px">
+                <div class="article-body">
+
+                    <p class="lead">Every cricket fan in India has an opinion on this debate. But most of them argue
+                        with emotion, not data. We decided to settle this the only way that matters — with numbers. And
+                        the story they tell isn't what either fanbase wants to hear.</p>
+
+                    <p>Let's be honest: comparing Sachin Tendulkar and Virat Kohli is like comparing two different eras
+                        of Indian cricket. Tendulkar debuted at 16 against Pakistan in 1989, when Indian pitches were
+                        dustbowls and helmets were optional. Kohli burst onto the scene in 2008, into a world of T20
+                        leagues, better fitness science, and flat batting paradises.</p>
+
+                    <p>But numbers don't care about eras. They only care about runs, averages, and consistency. So we
+                        built a comparison framework across every major statistical dimension. Here's what we found.</p>
+
+                    <h2>The Raw Numbers: Career Overview</h2>
+
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Sachin Tendulkar</th>
+                                <th>Virat Kohli</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">Test Runs</td>
+                                <td class="winner">15,921</td>
+                                <td>9,230</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Test Average</td>
+                                <td>53.78</td>
+                                <td>46.85</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Test Centuries</td>
+                                <td class="winner">51</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td class="label">ODI Runs</td>
+                                <td>18,426</td>
+                                <td class="winner">~14,800</td>
+                            </tr>
+                            <tr>
+                                <td class="label">ODI Average</td>
+                                <td>44.83</td>
+                                <td class="winner">~59.00</td>
+                            </tr>
+                            <tr>
+                                <td class="label">ODI Centuries</td>
+                                <td>49</td>
+                                <td class="winner">54</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Intl. Centuries</td>
+                                <td class="winner">100</td>
+                                <td>82</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Career Span</td>
+                                <td class="winner">24 years</td>
+                                <td>18 years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>At first glance, Tendulkar dominates in volume — more runs, more centuries, more years. But look
+                        closer: Kohli's ODI average of 59 absolutely destroys Tendulkar's 44.83. That's not a small gap.
+                        That's a generational gap.</p>
+
+                    <div class="pull-quote">Kohli averages 59 in ODIs. Tendulkar averaged 44.83. That's a 32% difference
+                        — and it's the single most uncomfortable stat in this entire debate.</div>
+
+                    <h2>The Peak Years: Who Was More Dominant?</h2>
+
+                    <p>Every great player has a peak window. Let's compare their best stretches:</p>
+
+                    <div class="score-card">
+                        <div>
+                            <div class="sc-name">Tendulkar's Peak</div>
+                            <div class="sc-num">1994-99</div>
+                            <div class="sc-label">ODI Avg: 48.2 · Test Avg: 57.4</div>
+                        </div>
+                        <div>
+                            <div class="sc-name">Kohli's Peak</div>
+                            <div class="sc-num">2016-19</div>
+                            <div class="sc-label">ODI Avg: 75.3 · Test Avg: 66.6</div>
+                        </div>
+                    </div>
+
+                    <p>Kohli's peak was statistically more dominant than Tendulkar's — and it's not close. Between 2016
+                        and 2019, Kohli was operating at a level that no Indian batsman has ever sustained. An ODI
+                        average of 75+ over three years is borderline absurd. In Tests during this period, he
+                        accumulated over 3,500 runs in 35 matches with 14 centuries.</p>
+
+                    <p>Tendulkar's peak, while magnificent, came with more inconsistency. He had brilliant series
+                        followed by quiet ones. Kohli, at his best, was a machine — relentless, format-agnostic, and
+                        almost robotically consistent.</p>
+
+                    <p><strong>Advantage: Kohli.</strong> Peak for peak, the numbers are clearly in his favour.</p>
+
+                    <h2>The Decline Curve: Here's Where It Gets Uncomfortable</h2>
+
+                    <p>This is the section Kohli fans won't enjoy.</p>
+
+                    <p>Tendulkar played his last Test at 40. His average in his final 5 years (2009-2013) dipped to
+                        about 40 in Tests — a decline, yes, but he still contributed regularly. More importantly, he
+                        played 200 Test matches. He stuck around, absorbed the criticism, and kept showing up.</p>
+
+                    <p>Kohli's decline was steeper and more public. After his imperial 2016-2019 run, his numbers fell
+                        off a cliff:</p>
+
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th>Period</th>
+                                <th>Test Average</th>
+                                <th>Test Centuries</th>
+                                <th>Notable</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">2016-2019</td>
+                                <td class="highlight">66.59</td>
+                                <td>14</td>
+                                <td>Peak Kohli. Arguably best in the world.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">2020-2022</td>
+                                <td>28.21</td>
+                                <td>0</td>
+                                <td>No centuries for 3+ years. The "century drought."</td>
+                            </tr>
+                            <tr>
+                                <td class="label">2023-2025</td>
+                                <td>~38.0</td>
+                                <td>3</td>
+                                <td>Partial recovery. Retired from Tests mid-IPL.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>The century drought between November 2019 and September 2022 — nearly three years without a
+                        hundred in any format — is unprecedented for a player of Kohli's calibre. Tendulkar never had a
+                        comparable dry spell at any point in his 24-year career.</p>
+
+                    <p>And then there's the retirement itself. Kohli retired from Tests at 36, with his average sliding
+                        below 47. Tendulkar played until 40, in part because of what he owed the game, but also because
+                        he could still compete. Kohli's Test exit felt more like an escape from declining numbers.</p>
+
+                    <p><strong>Advantage: Tendulkar.</strong> He aged more gracefully, played longer, and never had a
+                        three-year century drought.</p>
+
+                    <h2>ICC Tournaments: Who Showed Up When It Mattered?</h2>
+
+                    <p>This is where the debate gets spicy.</p>
+
+                    <p>Tendulkar played six World Cups. He was brilliant in 1996 (523 runs) and 2003 (673 runs), but in
+                        2007 (World Cup exit in group stage) and 2011 (where his final contribution was 85 runs across 9
+                        innings, excluding one century in a non-knockout game), his tournament record is mixed.</p>
+
+                    <p>Kohli? The 2023 ODI World Cup was his masterpiece — 765 runs at an average of 95.63, including
+                        three centuries and the record-breaking 50th ODI hundred. He was named Player of the Tournament.
+                        In the 2024 T20 World Cup, he scored a match-winning 76 in the final against South Africa. And
+                        in the 2025 Champions Trophy, he was instrumental in India's win with a century against
+                        Pakistan.</p>
+
+                    <p>However — and this is the uncomfortable part — India lost the 2023 World Cup final. Kohli's
+                        individual brilliance couldn't deliver the trophy in what should have been his crowning moment.
+                        Tendulkar, for all his flaws, was part of the team that won the 2011 World Cup.</p>
+
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th>ICC Trophies Won</th>
+                                <th>Tendulkar</th>
+                                <th>Kohli</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">ODI World Cup</td>
+                                <td>1 (2011)</td>
+                                <td>1 (2011, as player)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T20 World Cup</td>
+                                <td>0</td>
+                                <td class="winner">1 (2024)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Champions Trophy</td>
+                                <td>0</td>
+                                <td class="winner">2 (2013, 2025)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Total ICC Trophies</td>
+                                <td>1</td>
+                                <td class="winner">4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Advantage: Kohli.</strong> Four ICC trophies to Tendulkar's one. This is significant and
+                        often overlooked in the GOAT debate.</p>
+
+                    <h2>The Intangibles: Captaincy, Fitness, and Cultural Impact</h2>
+
+                    <p>Kohli led India to the No. 1 Test ranking for five consecutive years and captained a historic
+                        series win in Australia in 2018-19 — something no Indian captain had ever achieved. His
+                        captaincy record of 40 wins in 68 Tests makes him India's most successful Test captain by number
+                        of wins.</p>
+
+                    <p>Tendulkar was a comparatively poor captain. His stint as ODI captain in the late 1990s was
+                        largely forgettable, and he himself admitted captaincy affected his batting.</p>
+
+                    <p>On fitness, Kohli revolutionized Indian cricket's approach to physical conditioning. The Yo-Yo
+                        test, the emphasis on athletic fielding, the visible transformation of Indian cricket's fitness
+                        culture — that's Kohli's legacy, and it arguably matters more than any statistical record.</p>
+
+                    <p>Tendulkar's cultural impact, however, is immeasurable. He carried the expectations of a billion
+                        people for 24 years. He made cricket a religion. Streets emptied when he batted. No player
+                        before or since has had that kind of emotional hold on an entire nation.</p>
+
+                    <p><strong>Advantage: Split.</strong> Kohli as captain and fitness icon. Tendulkar as cultural
+                        deity.</p>
+
+                    <h2>The Business of Being GOAT</h2>
+
+                    <p>Here's a dimension nobody talks about in GOAT debates: commercial value.</p>
+
+                    <p>Kohli earned an estimated ₹634 crore ($75 million) in 2022 alone, making him one of the
+                        highest-paid athletes on the planet. His brand portfolio includes Agilitas (his own athleisure
+                        venture), investments in startups like Digit Insurance, Rage Coffee, Blue Tribe, and the World
+                        Bowling League. He's not just a cricketer — he's a business empire.</p>
+
+                    <p>Tendulkar was commercially massive for his era — the first Indian cricketer to sign a ₹100 crore
+                        endorsement deal (with MRF). But adjusted for today's market, Kohli's commercial dominance is on
+                        another level.</p>
+
+                    <p><strong>Advantage: Kohli.</strong> As a brand and businessman, he's in a different league.</p>
+
+                    <div class="verdict-box">
+                        <h3>🏏 The Daily Punch Verdict</h3>
+                        <p>There is no single GOAT. The data shows two completely different kinds of greatness:</p>
+                        <p><strong>Tendulkar wins:</strong> Career longevity, Test run volume (15,921 vs 9,230), Test
+                            centuries (51 vs 30), Test average (53.78 vs 46.85), no major decline phase, cultural impact
+                            that unified a nation.</p>
+                        <p><strong>Kohli wins:</strong> ODI average (59 vs 44.83), ODI centuries (54 vs 49), higher peak
+                            performance, ICC trophy count (4 vs 1), captaincy record, fitness revolution, commercial
+                            dominance.</p>
+                        <p>If you value longevity and Tests — Tendulkar is your GOAT. If you value ODI dominance,
+                            tournament wins, and peak intensity — it's Kohli. The honest answer is that they're both
+                            right, and anyone who says otherwise is arguing with emotion, not data.</p>
+                        <p><strong>But here's what makes Kohli fans uncomfortable:</strong> his Test career — 9,230 runs
+                            at 46.85 with a brutal decline phase — doesn't belong in the same conversation as
+                            Tendulkar's 15,921 at 53.78. In the format that truly tests greatness, Sachin is in a
+                            different stratosphere.</p>
+                    </div>
+
+                    <h2>What Do You Think?</h2>
+
+                    <p>This debate will never end — and that's the beauty of it. But we hope the numbers give you
+                        ammunition for your next argument at the chai stall, office pantry, or WhatsApp group.</p>
+
+                    <p>Tell us: who's your GOAT, and why? Share this article and tag us — we'll feature the best
+                        responses in next week's edition.</p>
+
+                    <div class="article-tags">
+                        <span class="article-tag-pill">Virat Kohli</span>
+                        <span class="article-tag-pill">Sachin Tendulkar</span>
+                        <span class="article-tag-pill">Cricket</span>
+                        <span class="article-tag-pill">GOAT Debate</span>
+                        <span class="article-tag-pill">Statistics</span>
+                        <span class="article-tag-pill">Indian Cricket</span>
+                        <span class="article-tag-pill">Opinion</span>
+                    </div>
+
+                </div>
+
+                <!-- SHARE BAR -->
+                <div class="article-share-bar">
+                    <span style="font-size:13px;font-weight:600;color:var(--ink-m)">Share this story</span>
+                    <div class="share-row">
+                        <a href="#" class="share-btn">𝕏 Twitter</a>
+                        <a href="#" class="share-btn">in LinkedIn</a>
+                        <a href="#" class="share-btn"
+                            onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied!';setTimeout(()=>this.textContent='🔗 Copy link',2000);return false;">🔗
+                            Copy link</a>
+                    </div>
+                </div>
+
+                <!-- AD -->
+                <div class="ad-unit ad-in" style="margin:32px 0"><!-- AD SLOT: Replace with your AdSense code --> Ad
+                    Slot — Post-Article 728×90</div>
+
+                <!-- NEWSLETTER INLINE -->
+                <div class="article-nl-box">
+                    <h3>Enjoyed this? Get the daily punch.</h3>
+                    <p>Sharp takes on business, tech, sports & culture — free in your inbox every morning.</p>
+                    <div class="nl-form" style="max-width:100%"><input type="email"
+                            placeholder="you@company.com"><button onclick="handleSubscribe(this)">Subscribe
+                            Free</button></div>
+                </div>
+
+                <!-- RELATED -->
+                <div class="related-section">
+                    <h3>You Might Also Like</h3>
+                    <div class="related-grid">
+                        <a href="article.html" class="related-card">
+                            <div class="related-img ph ph-1"></div>
+                            <span class="tag">Business</span>
+                            <h4>India's Quick Commerce War Has a New Battleground</h4>
+                            <div class="meta"><span>8 min</span></div>
+                        </a>
+                        <a href="article.html" class="related-card">
+                            <div class="related-img ph ph-5"></div>
+                            <span class="tag">Sports · Coming Soon</span>
+                            <h4>₹17 Crore/Year: Are IPL Captains Overpaid?</h4>
+                            <div class="meta"><span>Coming next week</span></div>
+                        </a>
+                        <a href="article.html" class="related-card">
+                            <div class="related-img ph ph-6"></div>
+                            <span class="tag">Money</span>
+                            <h4>₹1.5 Lakh/Month in Bangalore and Still Broke</h4>
+                            <div class="meta"><span>Coming next week</span></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- NEWSLETTER -->
+    <section class="nl-strip" id="newsletter">
+        <div class="nl-inner">
+            <h2>Sharp takes. Zero fluff.</h2>
+            <p>Join 14,000+ readers who start their morning with The Daily Punch.</p>
+            <div class="nl-form"><input type="email" placeholder="you@company.com"><button
+                    onclick="handleSubscribe(this)">Subscribe Free</button></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-mark">P</span>The Daily
+                    Punch</a>
+                <p>Sharp, independent analysis on business, tech, sports, and culture. Free to read.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sections</h4><a href="#">Business</a><a href="#">Technology</a><a href="#">Sports</a><a
+                    href="#">Opinion</a><a href="#">Money</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4><a href="about.html">About</a><a href="#">Contact</a><a href="#">Advertise</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 The Daily Punch. All rights reserved.</span>
+            <div class="footer-social"><a href="#">Twitter/X</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
