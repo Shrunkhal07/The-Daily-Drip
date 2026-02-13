@@ -25,8 +25,10 @@ document.querySelectorAll('.nav-tab[data-page]').forEach(function (tab) {
   tab.addEventListener('click', function () {
     document.querySelectorAll('.nav-tab').forEach(function (t) { t.classList.remove('active'); });
     document.querySelectorAll('.page').forEach(function (p) { p.classList.remove('active'); });
-    tab.classList.add('active');
-    var page = document.getElementById(tab.dataset.page);
+    // Sync active state across desktop and mobile tabs with the same data-page
+    var targetPage = tab.dataset.page;
+    document.querySelectorAll('.nav-tab[data-page="' + targetPage + '"]').forEach(function (t) { t.classList.add('active'); });
+    var page = document.getElementById(targetPage);
     if (page) page.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
