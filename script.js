@@ -2,6 +2,31 @@
 // THE DAILY DRIP — Main JavaScript
 // ═══════════════════════════════════════
 
+// ── Night Mode Toggle ──
+function toggleNightMode() {
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+  document.querySelectorAll('.night-mode-btn').forEach(function (btn) {
+    btn.textContent = isDark ? '☽' : '☀';
+    btn.setAttribute('title', isDark ? 'Switch to night mode' : 'Switch to day mode');
+  });
+}
+
+// Sync button icon with current theme on load
+document.addEventListener('DOMContentLoaded', function () {
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.querySelectorAll('.night-mode-btn').forEach(function (btn) {
+    btn.textContent = isDark ? '☀' : '☽';
+    btn.setAttribute('title', isDark ? 'Switch to day mode' : 'Switch to night mode');
+  });
+});
+
 // ── Date Display ──
 document.addEventListener('DOMContentLoaded', function () {
   const now = new Date();
