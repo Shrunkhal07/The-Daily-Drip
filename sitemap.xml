@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
   <url>
     <loc>https://thedailypunch.in/</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://thedailypunch.in/article.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thedailypunch.in/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <priority>0.5</priority>
-  </url>
+
   <url>
     <loc>https://thedailypunch.in/kohli-vs-tendulkar.html</loc>
     <lastmod>2026-02-13</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <news:news>
+      <news:publication>
+        <news:name>The Daily Punch</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-13</news:publication_date>
+      <news:title>Kohli vs Tendulkar: The Numbers That Will Make Kohli Fans Uncomfortable</news:title>
+    </news:news>
   </url>
+
   <url>
-    <loc>https://thedailypunch.in/india-vs-sa-loss.html</loc>
-    <lastmod>2026-02-23</lastmod>
-    <priority>0.8</priority>
+    <loc>https://thedailypunch.in/about.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
+
 </urlset>
