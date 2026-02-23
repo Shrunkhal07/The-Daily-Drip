@@ -4,26 +4,29 @@
 
 // ── Night Mode Toggle ──
 function toggleNightMode() {
-  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var html = document.documentElement;
+  var isDark = html.getAttribute('data-theme') === 'dark';
+
+  // Briefly enable smooth cross-fade for the whole page
+  html.classList.add('theme-transitioning');
+  setTimeout(function () { html.classList.remove('theme-transitioning'); }, 450);
+
   if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
+    html.removeAttribute('data-theme');
     localStorage.setItem('theme', 'light');
+    document.querySelectorAll('.night-mode-btn').forEach(function (btn) { btn.setAttribute('title', 'Go dark 🌙'); });
   } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    html.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
+    document.querySelectorAll('.night-mode-btn').forEach(function (btn) { btn.setAttribute('title', 'Back to light ☀'); });
   }
-  document.querySelectorAll('.night-mode-btn').forEach(function (btn) {
-    btn.textContent = isDark ? '☽' : '☀';
-    btn.setAttribute('title', isDark ? 'Switch to night mode' : 'Switch to day mode');
-  });
 }
 
-// Sync button icon with current theme on load
+// Sync button title with current theme on load
 document.addEventListener('DOMContentLoaded', function () {
   var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   document.querySelectorAll('.night-mode-btn').forEach(function (btn) {
-    btn.textContent = isDark ? '☀' : '☽';
-    btn.setAttribute('title', isDark ? 'Switch to day mode' : 'Switch to night mode');
+    btn.setAttribute('title', isDark ? 'Back to light ☀' : 'Go dark 🌙');
   });
 });
 
