@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════
-// THE DAILY DRIP — Main JavaScript
+// THE DAILY PUNCH — Main JavaScript
 // ═══════════════════════════════════════
 
 // ── Night Mode Toggle ──
