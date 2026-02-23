@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://thedailypunch.in/sitemap.xml
+
+# Block crawling of non-existent placeholder pages
+Disallow: /article.html
